@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Portal de Patrocínios da Terracap</title>
+        <meta name="description" content="Portal de Patrocínios da Terracap">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="style/application.css">
+
+        <script src="app/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Portal de Patrocínios</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#duvidas">Dúvidas</a></li>
+                            <li><a href="#contact">Contato</a></li>                            
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li><a href="#contact">Cadastro</a></li>
+                            <li><a data-toggle="modal" href="#login-modal" >Login</a></li>                            
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class='notifications center'></div>
+                <form class="signup-form" id="signup-form" action="usuarios" method="post" name="cadastrar-usuario-form">
+                    <div class="offset1 span11">
+                        <h3>Dados Básicos</h3>
+                    </div>
+                    <div class="offset1 span5">
+                        <fieldset>
+                            <label>Nome:</label>
+                            <input type="text" name="nome" tabindex="1" required>
+
+                            <label>CPF:</label>
+                            <input type="text" name="cpf" tabindex="3" required>
+
+                            <label>Senha</label>
+                            <input type="password" name="senha" tabindex="5" required>
+                        </fieldset>
+                    </div>
+                    <div class="offset1 span5">
+                        <fieldset>
+                            <label>Sobrenome:</label>
+                            <input type="text" name="sobrenome" tabindex="2" required>
+
+                            <label>Email:</label>
+                            <input type="text" name="email" tabindex="4" required>
+
+                            <label>Confirmação de senha:</label>
+                            <input type="password" tabindex="6" name="senha_confirmation" required>
+                        </fieldset>
+                    </div>
+
+                    <div class="offset1 span11">
+                        <h3>Contato</h3>
+                    </div>
+                    <div class="offset1 span5">
+                        <fieldset>
+                            <label>Endereço:</label>
+                            <input type="text" name="endereco" tabindex="7" required>
+
+                            <label>Bairro:</label>
+                            <input type="text" name="bairro" tabindex="9" required>
+
+                            <label>Complemento:</label>
+                            <input type="text" name="complemento" tabindex="11" required>
+
+                            <label>CEP:</label>
+                            <input type="text" name="cep" tabindex="13" required>
+                        </fieldset>
+                    </div>
+                    <div class="offset1 span5">
+                        <fieldset>
+                            <label>Cidade:</label>
+                            <input type="text" name="cidade" tabindex="8" required>
+
+                            <label>Estado:</label>
+                            <select tabindex="10" name="estado">
+                                <option>--</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>                           
+                            </select>
+                            <label>Telefone:</label>
+                            <input type="text" name="telefone" tabindex="12" required>
+                        </fieldset>
+                    </div>
+
+                    <div class="span11 offset1">
+                        <button type="submit" class="btn pull-right">Salvar</button>
+                    </div>                   
+                </form>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p>&copy; Company 2012</p>
+            </footer>
+        </div> <!-- /container -->
+
+
+        <!-- TODO : PUT MINIFIED VERSION AFTER DEVELOPMENT -->
+        <script src="app/vendor/jquery-1.9.1.js"></script>
+        <script src="app/vendor/jquery.cookie.js"></script>
+        <script src="app/vendor/bootstrap.js"></script>
+        <script src="app/vendor/bootstrap-notify.js"></script>
+        <script src="app/vendor/underscore.js"></script>
+        <script src="app/vendor/backbone.js"></script>
+
+
+        <!-- TODO : PUT THIS ASSETS IN A APP.JS -->
+        <script src="app/main.js"></script>
+        <script src="app/utils/utils.js"></script>
+        <script src="app/views/loginFormView.js"></script>
+
+        <script type="text/javascript">
+            /*
+            TODO: improve template system to DRY this stuff
+            $(document).ready(function() {
+                loginView = new window.LoginFormView({
+                    el : $('#login-modal')
+                });
+                loginView.render();
+            });
+            */
+            $("#signup-form").submit(function(event){
+                var handleSignupFormWindow = {
+                success : function(form, action, response) {
+                    utils.notification('center', 'Cadastro efetuado com sucesso!', 'success');
+                    $.cookie('app.ppt.api_key', form.data.api_key);
+                    window.location.reload(); 
+                },
+
+                failure : function(form, action) {
+                    utils.notification('center', 'Ocorreu algum problema ao efetuar seu cadastro.', 'error');
+                },
+
+                error : function(form, action) {
+                    utils.notification('center', 'Ocorreu algum problema ao efetuar seu cadastro.', 'error');
+                },
+
+            };
+
+                utils.submitForm(event, this, handleSignupFormWindow);
+            });
+        </script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
